@@ -1,1 +1,30 @@
-<p>transaction works!</p>
+<div>
+  <div>
+    <div>
+      <label> User Id </label>
+      <input [(ngModel)]="transaction.user.id">
+    </div>
+    <div>
+      <label> User name </label>
+      <input [(ngModel)]="transaction.user.name">
+    </div>
+    <div>
+      <label> DateTime </label>
+      <input [(ngModel)]="transaction.dateTime">
+    </div>
+    <div>
+      <label> Amount </label>
+      <input [(ngModel)]="transaction.amount">
+    </div>
+    <div>
+      <label> IsIncome </label>
+      <input type="checkbox" [(ngModel)]="transaction.isIncome">
+    </div>
+    <div>
+      <button (click)="submit(transaction)"> Add </button>
+    </div>
+    <div *ngIf="done">
+      <p> Transaction added </p>
+    </div>
+  </div>
+</div>
