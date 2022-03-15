@@ -7,20 +7,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BalanceComponent } from './balance/balance.component';
 import { TransactionComponent } from './transaction/transaction.component';
+import { BalanceHistoryComponent } from './balanceHistory/balanceHistory.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BalanceComponent,
     TransactionComponent,
-  ],
+    BalanceHistoryComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    BalanceComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

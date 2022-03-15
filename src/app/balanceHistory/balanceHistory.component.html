@@ -1,0 +1,18 @@
+<div>
+  <button (click)="getBalanceHistory()">
+    <a *ngIf="balanceHistory.length>0">Hide balance history</a>
+    <a *ngIf="balanceHistory.length<=0">Show balance history</a>
+  </button>
+  <table *ngIf="balanceHistory.length>0">
+    <tr>
+      <th>id</th>
+      <th>date &amp; time</th>
+      <th>amount</th>
+    </tr>
+    <tr *ngFor="let balance of balanceHistory">
+      <td>{{balance.id}}</td>
+      <td>{{balance.dateTime}}</td>
+      <td>{{balance.amount}}</td>
+    </tr>
+  </table>
+</div>

@@ -1,5 +1,6 @@
 <div>
   <p> Current balance: {{receivedBalance?.amount}}</p>
   <p> Updated : {{receivedBalance?.dateTime}} </p>
-  <p> Id : {{receivedBalance?.id}}</p>
+  <button (click)="getBalance()">refresh</button>
+  <hr/>
 </div>

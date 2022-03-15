@@ -14,13 +14,16 @@ export class BalanceComponent implements OnInit {
 
   constructor(private httpService: HttpService) { }
 
-  ngOnInit(): void{
-
-     this.httpService.getBalance()
+  getBalance(){
+    this.httpService.getBalance()
      .subscribe((data: any) => {
          this.receivedBalance=data;
         },
       error => console.log(error));
+  }
+
+  ngOnInit(): void{
+    this.getBalance();
     }
   }
 
