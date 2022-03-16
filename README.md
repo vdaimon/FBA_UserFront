@@ -1,4 +1,5 @@
-# FBAUserFront
+# FBA_UserFront
+FBA_UserFront - Angular application that implements the GUI for the user part of the "Family budget analyzer" project.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.1.
 
