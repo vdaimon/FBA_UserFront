@@ -20,6 +20,7 @@ export class BalanceHistoryComponent implements OnInit {
       this.httpService.getBalanceHistory().subscribe((data: any) => {
         this.balanceHistory=data;
         this.balanceHistory.sort((x,y)=>y.id-x.id);
+        this.balanceHistory.forEach(x=>x.dateTime=new Date(x.dateTime));
       });
     }
     else this.balanceHistory = new Array();

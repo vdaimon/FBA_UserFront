@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Transaction } from './transaction';
 import { HttpService} from '../http.service';
 import { User } from './user';
-import { BalanceComponent } from '../balance/balance.component';
 
 @Component({
   selector: 'app-transaction',
@@ -22,7 +21,6 @@ export class TransactionComponent{
     .subscribe((data: any) => {
       this.done=true;
       this.transaction.amount=0;
-
     }, error => console.log(error));
   }
 

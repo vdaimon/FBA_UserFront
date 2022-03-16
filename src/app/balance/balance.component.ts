@@ -18,6 +18,10 @@ export class BalanceComponent implements OnInit {
     this.httpService.getBalance()
      .subscribe((data: any) => {
          this.receivedBalance=data;
+         if(this.receivedBalance!=undefined)
+         {
+           this.receivedBalance.dateTime = new Date (this.receivedBalance.dateTime);
+         }
         },
       error => console.log(error));
   }
