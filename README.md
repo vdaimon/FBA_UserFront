@@ -3,9 +3,21 @@ FBA_UserFront - Angular application that implements the GUI for the user part of
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.1.
 
-## Development server
+## Installation and Running
+To run the project, you need to install the Angular CLI. To do this, run the following code on the command line:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+	npm install -g @angular/cli
+  
+
+Install the necessary packages while in the project folder:
+
+	npm install
+
+Run for development server: 
+
+	ng serve
+  
+Navigate to: `http://localhost:4200/` 
 
 ## Code scaffolding
 
