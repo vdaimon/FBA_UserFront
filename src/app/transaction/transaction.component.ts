@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Transaction } from './transaction';
 import { HttpService} from '../http.service';
-import { User } from './user';
 
 @Component({
   selector: 'app-transaction',
@@ -11,7 +10,7 @@ import { User } from './user';
 })
 export class TransactionComponent{
 
-  transaction: Transaction = new Transaction(0, new User(0,""), new Date(), 0, false );
+  transaction: Transaction = new Transaction(0, new Date(), 0, false, 1 );
   done:boolean = false;
 
   constructor(private httpService: HttpService) { }
@@ -21,7 +20,7 @@ export class TransactionComponent{
     .subscribe((data: any) => {
       this.done=true;
       this.transaction.amount=0;
-    }, error => console.log(error));
+    }, error => console.log(transaction));
   }
 
 }
