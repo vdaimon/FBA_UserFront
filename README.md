@@ -13,7 +13,7 @@ Install the necessary packages while in the project folder:
 
 	npm install
 
-Run for development server: 
+Run application for development: 
 
 	ng serve
   
